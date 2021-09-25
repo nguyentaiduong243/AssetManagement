@@ -1,0 +1,155 @@
+@import '../../../index.css';
+
+/* --- Styling --- */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* --- Navigation --- */
+.nav {
+  position: fixed;
+  width: var(--nav-width);
+  height: 100%;
+  background: var(--primary-color);
+  transition: 0.5s;
+  overflow: hidden;
+}
+.nav.active {
+  width: var(--icon-field-size);
+}
+
+.nav ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 0;
+}
+
+.nav ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+
+.nav ul li:hover {
+  background: var(--secondary-color);
+  transition: 0.3s;
+}
+.nav ul li:nth-child(1) {
+  margin-bottom: 20px;
+}
+.nav ul li:nth-child(1):hover {
+  background: transparent;
+}
+.nav ul li .link {
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav ul li .link .icon {
+  display: block;
+  padding: 5px;
+  margin-left: 0;
+  min-width: var(--icon-field-size);
+  height: var(--icon-field-size);
+  position: relative;
+  line-height: var(--icon-field-size);
+  text-align: center;
+}
+
+.nav ul li .link .icon i {
+  color: #fff;
+  font-size: 24px;
+}
+
+.nav ul li .link .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  margin-left: 0;
+  height: var(--icon-field-size);
+  line-height: var(--icon-field-size);
+  white-space: nowrap;
+}
+
+/* --- Main --- */
+.main {
+  position: absolute;
+  width: calc(100% - var(--nav-width));
+  left: var(--nav-width);
+  min-height: 100vh;
+  background: #f5f5f5;
+  transition: 0.5s;
+}
+
+.main.active {
+  width: calc(100% - var(--icon-field-size));
+  left: var(--icon-field-size);
+}
+
+.main .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--icon-field-size);
+  padding-right: 10px;
+  background: #fff;
+}
+
+/* --- Toggle --- */
+.toggle {
+  position: relative;
+  width: var(--icon-field-size);
+  height: var(--icon-field-size);
+}
+
+.toggle i {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: var(--icon-field-size);
+  font-size: 30px;
+  text-align: center;
+  color: #003147;
+  cursor: pointer;
+}
+
+/* --- Search --- */
+.search {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.search .bx {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.main__wrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}

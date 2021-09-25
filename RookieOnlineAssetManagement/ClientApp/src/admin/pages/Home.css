@@ -1,0 +1,40 @@
+@import '../../index.css';
+
+/* --- Card Box --- */
+.cards {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card__box {
+  position: relative;
+  background: var(--white);
+  display: flex;
+  padding: 1.1rem;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.card__box--numbers {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.card__box--name {
+  color: #999;
+}
+
+.card__box--icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+}

@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* --- Color --- */
+  --primary-color: #003147;
+  --secondary-color: #005983;
+  --white: #fff;
+  --white-gray: #f5f5f5;
+  --gray: #665;
+  --border-radius-button: 3px;
+
+  /* --- Width --- */
+  --nav-width: 320px;
+  --icon-field-size: 60px;
+  --icon-table-size: 1.2rem;
+
+  /* --- Font size --- */
+  --normal-font-size: 0.95rem;
+  --small-font-size: 0.8rem;
+}
+
+/* --- Base --- */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0;
+}
+
+.invalid-feedback {
+  color: red;
+  font-size: 13px;
+}
+
+a,
+u {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: var(--normal-font-size);
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* --- Color --- */
+  --input-color: #80868b;
+  --border-color: #dadce0;
+}
+
+/* --- Button --- */
+.btn {
+  display: block;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: var(--small-font-size);
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+  opacity: 0.8;
+}
+
+.btn__table {
+  display: inline;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #c40c2e;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn__table:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+  opacity: 0.8;
+}
+/* --- Form --- */
+.form__login {
+  width: 400px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+
+.wrapper-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  width: 45%;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+
+.form__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.form__field {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__field label {
+  width: 200px;
+  color: var(--gray);
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.form__field .input,
+.form__field textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: var(--border-radius-button);
+  transition: all 0.3s ease;
+}
+
+.form__field textarea {
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.form__field .custom__select {
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+.form__field .custom__select:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+.form__field .custom__select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.font {
+  font-size: var(--icon-table-size);
+  cursor: pointer;
+  outline: none;
+}
+.spinner {
+  font-size: 35px;
+  position: absolute;
+  top: 300px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__field input:focus,
+.form__field textarea:focus,
+.form__field .custom__select select:focus {
+  border: 1px solid var(--primary-color);
+}
+
+.form__field p {
+  font-size: 1rem;
+  color: #757575;
+}
+.form__field .check {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.form__field .check input[type='checkbox'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.form__field .check .checkmark {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--primary-color);
+  display: block;
+  position: relative;
+}
+.form__field .check .checkmark:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.form__field .check input[type='checkbox']:checked ~ .checkmark {
+  background: var(--primary-color);
+}
+
+.form__field .check input[type='checkbox']:checked ~ .checkmark:before {
+  display: block;
+}
+
+.form__field .btn {
+  width: 25%;
+  padding: 8px 10px;
+  font-size: var(--normal-font-size);
+  border: 0px;
+  background: var(--secondary-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: var(--border-radius-button);
+  outline: none;
+}
+
+.form__field .btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+.form__field .btn__cancel {
+  display: block;
+  width: 100%;
+  margin-left: 10px;
+  padding: 8px 10px;
+  font-size: var(--normal-font-size);
+  font-weight: 300;
+  border: 0px;
+  background: #757575;
+  color: #fff;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+
+.form__field .btn__cancel:hover {
+  opacity: 0.8;
+}
+
+.form__field:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 420px) {
+  .form__field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form__field label {
+    margin-bottom: 5px;
+  }
+}
+
+.form__validation {
+  color: red;
+  font-size: var(--small-font-size);
+}
+
+.react-datepicker__input-container input {
+  width: 200%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-button);
+  outline: none;
+}
+
+.react-datepicker__input-container input:focus {
+  border: 1.5px solid var(--secondary-color);
+}
+.react-datepicker__close-icon {
+  position: relative;
+}
+/* .form__title {
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.form__div {
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+}
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0 0.25rem;
+  background-color: #fff;
+  color: var(--input-color);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+}
+
+.form__input:focus + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: var(--secondary-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+.form__input:focus {
+  border: 1.5px solid var(--secondary-color);
+}
+
+.form__validation {
+  color: red;
+  font-size: var(--small-font-size);
+} */
+
+.paging-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.paging-btn {
+  display: flex;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.paging-btn div {
+  font-size: 18px;
+  min-width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 35px;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}

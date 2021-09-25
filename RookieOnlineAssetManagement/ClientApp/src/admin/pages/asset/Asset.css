@@ -1,0 +1,115 @@
+.select-category {
+  position: relative;
+}
+
+.select-category span {
+  position: absolute;
+  top: 7px !important;
+  right: 32px !important;
+}
+
+.select-category span svg {
+  font-size: 22px !important;
+  color: var(--secondary-color);
+}
+
+.control-btn {
+  justify-content: flex-end;
+}
+
+.control-btn .btn {
+  margin-left: 15px;
+}
+
+.cancel-btn {
+  background-color: #fff !important;
+  border: 1px solid var(--primary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+.table__view {
+  position: relative;
+  min-height: 200px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  font-size: 24px;
+  color: var(--primary-color);
+  padding: 10px 20px;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+}
+
+.history-row {
+  flex-direction: column;
+  border-bottom: none !important;
+}
+
+.history-title {
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  color: var(--primary-color) !important;
+  padding: 10px 0 15px 0;
+}
+
+.history-value {
+  width: 580px;
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.history-value table {
+  width: 100%;
+  font-size: var(--normal-font-size);
+  overflow-wrap: anywhere;
+  display: block;
+}
+
+.history-value tbody {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: visible;
+  min-height: 40px;
+  max-height: 150px;
+}
+
+.history-value table thead tr {
+  height: 40px;
+  width: 100%;
+}
+
+.history-value table thead th {
+  text-align: left;
+  font-weight: 500 !important;
+  color: #777e88 !important;
+  padding: 0 15px 0 0;
+}
+
+.history-value table tbody tr {
+  height: 40px;
+  font-weight: 400 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.table-no-history {
+  position: absolute;
+  right: 44%;
+  bottom: 13px;
+}
+
+.row-value-specification {
+  max-height: 150px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: visible;
+}

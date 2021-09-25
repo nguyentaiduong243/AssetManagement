@@ -1,0 +1,119 @@
+/* --- Button --- */
+/* .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 6px;
+}
+.btn:hover {
+  opacity: 0.85;
+  transition: 0.3s;
+} */
+
+/* .btn {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+  opacity: 0.8;
+} */
+
+/* --- Search --- */
+.search {
+  position: relative;
+  width: 180px;
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .search input {
+    width: 75%;
+  }
+}
+
+.search label {
+  position: relative;
+  width: 100%;
+}
+
+.search input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+}
+
+/* --- Table --- */
+.table__view {
+  position: relative;
+  min-height: 800px;
+  background: var(--white);
+  padding: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* Table horizontal scroll bar appears when device smaller than 768px */
+  .table__view {
+    overflow-x: auto;
+  }
+}
+
+.table__view h2 {
+  padding-bottom: 2rem;
+}
+.table__view--search i {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.table__view--search {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.table__view table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.875rem;
+}
+
+.table__view table thead th {
+  font-weight: 700;
+  text-align: left;
+  padding: 0.6rem;
+}
+
+.table__view table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.table__view table tr:last-child {
+  border-bottom: none;
+}
+.table__view table tbody tr:hover {
+  background: #005983;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.table__view table tr td {
+  padding: 0.6rem;
+}
